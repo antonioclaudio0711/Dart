@@ -1,0 +1,39 @@
+Caso 01:
+
+funcao (parametro_1) {
+    // Demora 10 segundos para realizar as três sentenças
+    sentença #01
+    sentença #02
+    sentença #03
+
+    // Demora 01 segundo para realizar as duas sentenças
+    sentença #04
+    sentença #05
+}
+
+funcao(3, 2); // Tempo de realização: 11 segundos
+funcao(3, 4); // Tempo de realização: 11 segundos
+funcao(3, 6); // Tempo de realização: 11 segundos
+Duração total: 33 segundos
+
+
+Caso 02:
+
+funcao (parametro_1) {
+    // Demora 10 segundos para realizar as três sentenças
+    sentença #01
+    sentença #02
+    sentença #03
+
+    return funcao_2 (parametro_2) {
+        // Demora 01 segundo para realizar as duas sentenças
+        sentença #04
+        sentença #05
+    }
+}
+
+var funcao_com_parametro_3 = funcao(3); // Tempo de realização: 10 segundos
+funcao(2); // Tempo de realização: 1 segundo
+funcao(4); // Tempo de realização: 1 segundo
+funcao(6); // Tempo de realização: 1 segundo
+Duração total: 13 segundos
