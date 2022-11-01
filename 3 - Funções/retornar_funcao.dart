@@ -7,8 +7,8 @@ main() {
   soma_com_5(8);
 }
 
-void Function(int) somar(int a) {
+int Function(int) somar(int a) {
   return (int b) {
-    print("A soma entre $a e $b é: ${a + b}");
+    return a + b;
   };
 }
