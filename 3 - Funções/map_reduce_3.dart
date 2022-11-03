@@ -6,17 +6,13 @@ main() {
     {"nome": "Lunna", "nota": 3.2},
   ];
 
-  double Function(Map) notas = (relacao_de_nota) => relacao_de_nota["nota"];
-  var total_notas = alunos.map(notas);
+  var total_notas = alunos
+    .map((relacao_notas) => relacao_notas['nota'])
+    .map((nota) => (nota as double))
+    .reduce((acumulo, elemento) => acumulo + elemento);
 
-  var soma_notas = total_notas.reduce(somar);
-
-  var media = soma_notas / total_notas.length;
+  var media = total_notas / alunos.length;
 
   print(
-      "Foram inseridas ${total_notas.length} notas: $total_notas, cuja soma totaliza em $soma_notas. Desta forma, a média das notas inseridas é de $media");
-}
-
-double somar(double acumulador, double elemento) {
-  return acumulador + elemento;
+      "Foram inseridas ${alunos.length} notas, cuja soma totaliza em $total_notas. Desta forma, a média das notas inseridas é de $media");
 }
