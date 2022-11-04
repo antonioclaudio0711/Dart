@@ -4,7 +4,6 @@ class Venda_item {
   Produto? produto;
   var quantidade;
   double? _preco;
-  Venda_item operator +(var i) => this;
 
   Venda_item({this.produto, this.quantidade = 1});
 
